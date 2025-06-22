@@ -1,0 +1,69 @@
+@import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+
+html {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+  height: 100%; /* Full height - This guarantees that the background will cover the whole height */
+  width: 100%; /* Full width - Same premice as above */
+  /* background-image: url("https://w.wallhaven.cc/full/4y/wallhaven-4yzpxg.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; */
+}
+
+body {
+  height: 100%;
+}
+
+#page {
+  margin: auto;
+  max-width: 40rem;
+  padding: 1rem;
+  background-color: rgb(203, 203, 203);
+  
+}
+
+#outer-shell {
+  padding: 1rem;
+  background-color: rgb(139, 139, 139);
+}
+
+#screen {
+  background-color: rgb(157, 203, 212);
+  padding: 1rem;
+}
+
+#chin {
+  padding-top: 3rem;
+}
+
+#power-button {
+  background-color: rgb(177, 255, 182);
+  width: 100%;
+  max-width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  margin: 0 auto;
+  position: absolute;
+  right: 10rem;
+  top: 34rem;
+}
+
+#neck {
+  height: 4rem;
+  max-width: 10rem;
+  background-color: rgb(218, 218, 218);
+  margin: 0 auto;
+}
+
+#stand {
+  height: 1rem;
+  max-width: 15rem;
+  background-color: rgb(218, 218, 218);
+  margin: 0 auto;
+}
+
+.box {
+  text-align: center;
+  background-color: aliceblue;
+}

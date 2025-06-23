@@ -1,29 +1,170 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>parkcard</title>
-    <link rel="stylesheet" href="./style.css" />
-    <script type="module" src="./script.js"></script>
-  </head>
-  <body>
-    
-    <div id="page">
-      <div id="outer-shell">
-        <div id="screen">
-          <div class="box">Github</div>
-          <div class="box">Blog</div>
-          <div class="box">YouTube</div>
-          <div class="box">LinkedIn</div>
-          <div class="box">Sample</div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>parky's card</title>
+  <link rel="stylesheet" href="./style.css" />
+  <script type="module" src="./script.js"></script>
+</head>
+
+<body>
+  <div id="page">
+    <div id="header">
+      <h1 id="fake-shadow">parklez</h1>
+      <h1 id="headline">parklez</h1>
+    </div>
+
+    <div id="content">
+      <!-- Notepad window -->
+      <div id="notepad-window" class="window glass active">
+        <div class="title-bar">
+          <div>
+            <!-- This icon needs rework to be vertically centered -->
+            <img src="resources/notepad-icon.ico" alt="Notepad Icon" width="20" height="20"
+              style="vertical-align: bottom" />
+            <span class="title-bar-text">All my links.txt</span>
+          </div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div id="window-body" class="window-body" style="padding: 0">
+          <!-- Menu bar -->
+          <ul role="menubar" class="can-hover">
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              File
+              <ul role="menu">
+                <li role="menuitem">
+                  <a href="#menubar"> Open <span>Ctrl+O</span> </a>
+                </li>
+                <li role="menuitem">
+                  <a href="#menubar"> Save <span>Ctrl+S</span> </a>
+                </li>
+                <li role="menuitem" class="has-divider">
+                  <a href="#menubar">
+                    Save As... <span>Ctrl+Shift+S</span>
+                  </a>
+                </li>
+                <li role="menuitem"><a href="#menubar">Exit</a></li>
+              </ul>
+            </li>
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              Edit
+              <ul role="menu">
+                <li role="menuitem"><a href="#menubar">Undo</a></li>
+                <li role="menuitem"><a href="#menubar">Copy</a></li>
+                <li role="menuitem"><a href="#menubar">Cut</a></li>
+                <li role="menuitem" class="has-divider">
+                  <a href="#menubar">Paste</a>
+                </li>
+                <li role="menuitem"><a href="#menubar">Delete</a></li>
+                <li role="menuitem"><a href="#menubar">Find...</a></li>
+                <li role="menuitem"><a href="#menubar">Replace...</a></li>
+                <li role="menuitem"><a href="#menubar">Go to...</a></li>
+              </ul>
+            </li>
+            <li role="menuitem" tabindex="0" aria-haspopup="true">Format</li>
+
+            <li role="menu"></li>
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              View
+              <ul role="menu">
+                <li role="menuitem" tabindex="0" aria-haspopup="true">
+                  Zoom
+                  <ul role="menu">
+                    <li role="menuitem"><button>Zoom In</button></li>
+                    <li role="menuitem"><button>Zoom Out</button></li>
+                  </ul>
+                </li>
+                <li role="menuitem"><a href="#menubar">Status Bar</a></li>
+              </ul>
+            </li>
+            <li role="menuitem" tabindex="0" aria-haspopup="true">
+              Help
+              <ul role="menu">
+                <li role="menuitem"><a href="#menubar">View Help</a></li>
+                <li role="menuitem"><a href="#menubar">About</a></li>
+              </ul>
+            </li>
+          </ul>
+
+          <!-- Text area -->
+          <div id="notepad-text-area" class="has-scrollbar">
+            <br />
+            <p>I have a <a href="https://github.com/parklez">github</a></p>
+            <br />
+            <p>
+              and a
+              <a href="https://parklez.github.io/blog/#/">personal blog</a>
+            </p>
+            <br />
+            <p>
+              also a
+              <a href="https://www.youtube.com/@leparklez">dead youtube channel</a>
+            </p>
+            <br />
+            <p>
+              if you're a gamer you can find me on
+              <a href="https://www.twitch.tv/leparklez">twitch</a>
+            </p>
+          </div>
         </div>
       </div>
-      <div id="chin">
-        <div id="power-button"></div>
+
+      <!-- Personalization window -->
+      <div class="background">
+        <div class="window glass active" style="max-width: 100%">
+          <div class="title-bar">
+            <div>
+              <!-- This icon needs rework to be vertically centered -->
+              <img src="resources/personalize-icon.ico" alt="Notepad Icon" width="20" height="20"
+                style="vertical-align: bottom; margin-top: 4px" />
+              <span class="title-bar-text">Window Color and Appearance</span>
+            </div>
+            <div class="title-bar-controls">
+              <button aria-label="Minimize"></button>
+              <button aria-label="Close"></button>
+            </div>
+          </div>
+          <div class="window-body has-space" style="padding: 1rem">
+            <div class="field-row">
+              <label>Hue:</label>
+              <input type="range" min="1" max="100" value="56" />
+            </div>
+          </div>
+        </div>
       </div>
     </div>
-    <div id="neck"></div>
-    <div id="stand"></div>
-  </body>
+  </div>
+
+  <!-- Desktop Icons -->
+  <div id="trash-icon">
+    <img src="resources/trash-icon.ico" alt="Trash Icon" />
+    <div>Recycle Bin</div>
+  </div>
+
+  <!-- Taskbar -->
+  <div id="taskbar" class="title-bar">
+    <!-- Icons -->
+    <div id="start-menu">
+      <img src="resources/win7-start.png" alt="Start Icon" />
+    </div>
+    <div id="notepad-icon" class="title-bar taskbar-icon">
+      <img src="resources/notepad-icon.ico" alt="Notepad Icon" />
+    </div>
+    <div id="show-desktop" class="title-bar"></div>
+    <div id="notification-area"></div>
+    <div id="notification-area-fade"></div>
+    <div id="notification-icons">
+      <img id="network-icon" src="resources/network-icon.ico" alt="Network Icon" />
+      <img id="volume-icon" src="resources/volume-icon.ico" alt="Volume Icon" />
+      <img id="action-center-icon" src="resources/action-center-icon.ico" alt="Action Center Icon" />
+    </div>
+    <div id="clock"><!-- Clock code goes here! --></div>
+  </div>
+</body>
+
 </html>

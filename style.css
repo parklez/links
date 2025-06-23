@@ -1,69 +1,205 @@
 @import "https://cdn.jsdelivr.net/npm/bulma@1.0.4/css/bulma.min.css";
+@import "https://fonts.cdnfonts.com/css/minecraft-4";
+@import "https://unpkg.com/7.css";
 
-html {
-  padding-top: 2rem;
-  padding-bottom: 2rem;
-  height: 100%; /* Full height - This guarantees that the background will cover the whole height */
-  width: 100%; /* Full width - Same premice as above */
-  /* background-image: url("https://w.wallhaven.cc/full/4y/wallhaven-4yzpxg.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center; */
+/* This removes ONLY the browser scrollbar, not the scrollable content */
+:root::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+  display: none;
 }
 
-body {
-  height: 100%;
+html {
+  background: url("./resources/wallpaper.jpeg") no-repeat center center fixed;
+  background-size: cover;
 }
 
 #page {
   margin: auto;
   max-width: 40rem;
-  padding: 1rem;
-  background-color: rgb(203, 203, 203);
-  
+  padding-bottom: 3rem;
 }
 
-#outer-shell {
-  padding: 1rem;
-  background-color: rgb(139, 139, 139);
-}
-
-#screen {
-  background-color: rgb(157, 203, 212);
-  padding: 1rem;
-}
-
-#chin {
-  padding-top: 3rem;
-}
-
-#power-button {
-  background-color: rgb(177, 255, 182);
-  width: 100%;
-  max-width: 2rem;
-  height: 2rem;
-  border-radius: 50%;
-  margin: 0 auto;
-  position: absolute;
-  right: 10rem;
-  top: 34rem;
-}
-
-#neck {
-  height: 4rem;
-  max-width: 10rem;
-  background-color: rgb(218, 218, 218);
-  margin: 0 auto;
-}
-
-#stand {
-  height: 1rem;
-  max-width: 15rem;
-  background-color: rgb(218, 218, 218);
-  margin: 0 auto;
-}
-
-.box {
+#headline {
   text-align: center;
-  background-color: aliceblue;
+  font-family: "Minecraft", sans-serif;
+  font-size: 4rem;
+  background: linear-gradient(to top, #1352ff, #9bfff5);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#fake-shadow {
+  position: absolute;
+  top: 8px;
+  left: 0px;
+  z-index: -1;
+  text-align: center;
+  font-family: "Minecraft", sans-serif;
+  font-size: 4rem;
+  color: black;
+  width: 100%;
+}
+
+#notepad-window {
+  margin: 1.5em;
+}
+
+#notepad-text-area {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: "Segoe UI";
+  background-color: white;
+  overflow-y: scroll;
+  height: 20rem;
+}
+
+#taskbar {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  border-radius: 0;
+  height: 3rem;
+  background: var(--window-background-glass-stripes);
+  background-color: var(--taskbar-color);
+}
+
+#clock {
+  position: absolute;
+  right: 2rem;
+  margin-top: 0.5rem;
+  text-align: center;
+  color: white;
+  font-family: "Segoe UI";
+  font-size: 1rem;
+  text-shadow: 1px 1px 5px rgb(0, 0, 0);
+  font-smooth: unset;
+  -webkit-font-smoothing: none;
+}
+
+#show-desktop {
+  position: absolute;
+  right: -1px;
+  bottom: -1px;
+  height: 3rem;
+  width: 1.2rem;
+  border-radius: 0;
+  background-color: var(--taskbar-color);
+}
+
+#notification-area {
+  position: absolute;
+  right: 0;
+  bottom: -1px;
+  height: 3rem;
+  width: 13rem;
+  border-radius: 0;
+  /* There's some contrast that I can not replicate well...  */
+  background-color: rgba(0, 0, 0, 0.35);
+}
+
+#notification-area-fade {
+  position: absolute;
+  right: 13rem;
+  bottom: -1px;
+  height: 3rem;
+  width: 3rem;
+  border-radius: 0;
+  /* There's some contrast that I can not replicate well...  */
+  background-image: linear-gradient(to right, rgba(255,196,0,0), rgba(0, 0, 0, 0.35));
+}
+
+#notification-icons {
+  position: absolute;
+  right: 7rem;
+  bottom: -1px;
+  height: 3rem;
+  width: 10rem;
+  border-radius: 0;
+}
+
+#network-icon {
+  height: 1.3rem;
+  display: block;
+  position: absolute;
+  right: 2rem;
+  top: 50%;
+  transform: translateY(-50%);
+  image-rendering: pixelated;
+  padding-right: 0.5rem;
+}
+
+#volume-icon {
+  height: 1.3rem;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  image-rendering: crisp-edges;
+  padding-right: 0.5rem;
+}
+
+#action-center-icon {
+  height: 1.3rem;
+  display: block;
+  position: absolute;
+  right: 4rem;
+  top: 50%;
+  transform: translateY(-50%);
+  image-rendering: crisp-edges;
+  padding-right: 0.5rem;
+}
+
+#start-menu {
+  position: absolute;
+  left: -1px;
+  bottom: -1px;
+  height: 3rem;
+  padding: 1px;
+  width: 4rem;
+  border-radius: 0;
+}
+
+#start-menu > img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#notepad-icon {
+  position: absolute;
+  bottom: -1px;
+  left: 4.5rem;
+  height: 3rem;
+  width: 4.5rem;
+  border-radius: 0;
+}
+
+#notepad-icon > img {
+  height: 100%;
+  display: block;
+  margin: 0 auto;
+}
+
+#trash-icon {
+  position: absolute;
+  right: 2rem;
+  bottom: 5rem;
+  display: block;
+  margin: 0 auto;
+  z-index: -1;
+  max-width: 4rem;
+}
+
+#trash-icon > img {
+  max-height: 3rem;
+  margin: auto;
+  display: block;
+}
+
+#trash-icon > div {
+  text-align: center;
+  text-shadow: 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black, 0 0 3px black;
+  color: white;
 }

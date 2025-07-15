@@ -10,8 +10,14 @@
 }
 
 html {
-  background: url("./resources/wallpaper.jpeg") no-repeat center center fixed;
+  background: url("./resources/wallpaper.jpg") no-repeat center fixed;
   background-size: cover;
+}
+
+/* This improves the glass effect for title bars, albeit far from perfect */
+.window.glass > .title-bar {
+  background-attachment: unset;
+  cursor: default;
 }
 
 #page {
@@ -27,6 +33,7 @@ html {
   background: linear-gradient(to top, #1352ff, #9bfff5);
   background-clip: text;
   -webkit-text-fill-color: transparent;
+  cursor: default;
 }
 
 #fake-shadow {
@@ -42,7 +49,12 @@ html {
 }
 
 #notepad-window {
-  margin: 1.5em;
+  position: absolute;
+  top: 6rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 35rem;
+  max-width: 100%
 }
 
 #notepad-text-area {
@@ -52,6 +64,15 @@ html {
   background-color: white;
   overflow-y: scroll;
   height: 20rem;
+}
+
+#personalization-window {
+  position: absolute;
+  top: 32rem;
+  left: 50%;
+  width: 40rem;
+  transform: translateX(-50%);
+  max-width: 100%;
 }
 
 #taskbar {

@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>parky's card</title>
   <link rel="stylesheet" href="./style.css" />
-  <script type="module" src="./script.js"></script>
+  <script type="module" src="./src/script.js"></script>
 </head>
 
 <body>
@@ -19,7 +19,7 @@
     <div id="content">
       <!-- Notepad window -->
       <div id="notepad-window" class="window glass active">
-        <div class="title-bar">
+        <div id="notepad-window-header" class="title-bar">
           <div>
             <!-- This icon needs rework to be vertically centered -->
             <img src="resources/notepad-icon.ico" alt="Notepad Icon" width="20" height="20"
@@ -115,25 +115,23 @@
       </div>
 
       <!-- Personalization window -->
-      <div class="background">
-        <div class="window glass active" style="max-width: 100%">
-          <div class="title-bar">
-            <div>
-              <!-- This icon needs rework to be vertically centered -->
-              <img src="resources/personalize-icon.ico" alt="Notepad Icon" width="20" height="20"
-                style="vertical-align: bottom; margin-top: 4px" />
-              <span class="title-bar-text">Window Color and Appearance</span>
-            </div>
-            <div class="title-bar-controls">
-              <button aria-label="Minimize"></button>
-              <button aria-label="Close"></button>
-            </div>
+      <div id="personalization-window" class="window glass active">
+        <div id="personalization-window-header" class="title-bar">
+          <div>
+            <!-- This icon needs rework to be vertically centered -->
+            <img src="resources/personalize-icon.ico" alt="Notepad Icon" width="20" height="20"
+              style="vertical-align: bottom; margin-top: 4px" />
+            <span class="title-bar-text">Window Color and Appearance</span>
           </div>
-          <div class="window-body has-space" style="padding: 1rem">
-            <div class="field-row">
-              <label>Hue:</label>
-              <input type="range" min="1" max="100" value="56" />
-            </div>
+          <div class="title-bar-controls">
+            <button aria-label="Minimize"></button>
+            <button aria-label="Close"></button>
+          </div>
+        </div>
+        <div class="window-body has-space" style="padding: 1rem">
+          <div class="field-row">
+            <label>Hue:</label>
+            <input type="range" min="1" max="100" value="56" />
           </div>
         </div>
       </div>
